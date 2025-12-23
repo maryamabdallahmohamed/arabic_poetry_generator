@@ -3,3 +3,7 @@ datasets
 .cursor
 *csv
 *.pdf
+*.txt
+*.pt
+.DS_Store
+*.docx
