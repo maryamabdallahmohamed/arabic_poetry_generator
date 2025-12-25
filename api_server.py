@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # Load the tokenizer and model
-checkpoint_path = "notebooks/checkpoints/model_epoch_6.pt"
+checkpoint_path = "notebooks/checkpoints/model_epoch_4.pt"
 model = TP_PoetDecoder(vocab_size=32768)
 checkpoint = torch.load(checkpoint_path, map_location="cpu")
 model.load_state_dict(checkpoint["model_state_dict"])
