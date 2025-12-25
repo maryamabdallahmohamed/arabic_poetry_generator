@@ -7,3 +7,5 @@ datasets
 *.pt
 .DS_Store
 *.docx
+__pycache__
+node_modules
