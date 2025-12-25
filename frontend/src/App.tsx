@@ -42,21 +42,24 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="app-gradient">
       <Header language={language} onLanguageChange={setLanguage} />
-      <main className="container mx-auto p-4">
-        <InputPanel
-          language={language}
-          inputText={inputText}
-          onInputChange={setInputText}
-          onGenerate={handleGenerate}
-          isGenerating={isGenerating}
-        />
-        <PredictionPanel 
-          language={language} 
-          prediction={prediction} 
-          isGenerating={isGenerating} 
-        />
+      <main className="container mx-auto px-4 py-6 max-w-7xl" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Left: Prediction, Right: Input — matches reference */}
+          <PredictionPanel 
+            language={language} 
+            prediction={prediction} 
+            isGenerating={isGenerating} 
+          />
+          <InputPanel
+            language={language}
+            inputText={inputText}
+            onInputChange={setInputText}
+            onGenerate={handleGenerate}
+            isGenerating={isGenerating}
+          />
+        </div>
       </main>
     </div>
   );

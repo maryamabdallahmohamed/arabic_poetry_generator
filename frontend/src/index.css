@@ -364,6 +364,20 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* App warm dark gradient backdrop */
+  .app-gradient {
+    min-height: 100vh;
+    background:
+    radial-gradient(900px 700px at 95% 110%, rgba(255, 105, 60, 0.14), transparent 55%),
+    radial-gradient(1200px 800px at -10% -10%, rgba(255, 160, 64, 0.10), transparent 60%),
+    linear-gradient(180deg, oklch(0.145 0 0) 0%, oklch(0.205 0 0) 100%);
+  }
+
+  /* UI font override for cleaner Arabic UI */
+  body {
+    font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h1 {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
